@@ -31,11 +31,13 @@ sudo hostnamectl set-hostname Jenkins
       
    # Tomcat is up and running 
    # Change Host Name to Tomcat
-sudo hostnamectl set-hostname Tomcat
- sudo apt update
- sudo apt-get install tomcat9 tomcat9-docs tomcat9-admin -y
- sudo cp -r /usr/share/tomcat9-admin/* /var/lib/tomcat9/webapps/ -v
- sudo vi /var/lib/tomcat9/conf/tomcat-
+
+1) sudo hostnamectl set-hostname Tomcat
+
+2) sudo apt update
+3) sudo apt-get install tomcat9 tomcat9-docs tomcat9-admin -y
+4) sudo cp -r /usr/share/tomcat9-admin/* /var/lib/tomcat9/webapps/ -v
+5) sudo vi /var/lib/tomcat9/conf/tomcat-
    # add
         <role rolename="manager-script"/>
         <user username="tomcat" password="password" roles="manager-script"/>
