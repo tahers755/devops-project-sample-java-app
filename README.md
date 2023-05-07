@@ -6,41 +6,41 @@
     • Jenkins is up and running
 
 # Change Host Name to Jenkins
-# sudo hostnamectl set-hostname Jenkins
-# sudo apt update
-# sudo apt install default-jdk -y
-# sudo apt install maven -y
+sudo hostnamectl set-hostname Jenkins
+ sudo apt update
+ sudo apt install default-jdk -y
+ sudo apt install maven -y
     
    # Jenkins Setup
    # Add Repository key to the system
-# curl -fsSL https://pkg.jenkins.io/debian/jenkins.io-2023.key | sudo tee \
-# /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+ curl -fsSL https://pkg.jenkins.io/debian/jenkins.io-2023.key | sudo tee \
+ /usr/share/keyrings/jenkins-keyring.asc > /dev/null
 
 # Append debian package repo address to the system
 
-# echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
-  # https://pkg.jenkins.io/debian binary/ | sudo tee \
-  # /etc/apt/sources.list.d/jenkins.list > /dev/null
+ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+ https://pkg.jenkins.io/debian binary/ | sudo tee \
+ /etc/apt/sources.list.d/jenkins.list > /dev/null
 
 # Update Ubuntu package
 
-# sudo apt install jenkins -y
+ sudo apt install jenkins -y
 
-Access Jenkins in web browser
+# Access Jenkins in web browser
 
       
    # Tomcat is up and running 
    # Change Host Name to Tomcat
-# sudo hostnamectl set-hostname Tomcat
-   # sudo apt update
-   # sudo apt-get install tomcat9 tomcat9-docs tomcat9-admin -y
-   # sudo cp -r /usr/share/tomcat9-admin/* /var/lib/tomcat9/webapps/ -v
-   # sudo vi /var/lib/tomcat9/conf/tomcat-
+sudo hostnamectl set-hostname Tomcat
+ sudo apt update
+ sudo apt-get install tomcat9 tomcat9-docs tomcat9-admin -y
+ sudo cp -r /usr/share/tomcat9-admin/* /var/lib/tomcat9/webapps/ -v
+ sudo vi /var/lib/tomcat9/conf/tomcat-
    # add
         <role rolename="manager-script"/>
         <user username="tomcat" password="password" roles="manager-script"/>
 
-# sudo systemctl restart tomcat9
+ sudo systemctl restart tomcat9
 
     • Make sure you configure maven installation under Jenkins-->manage Jenkins-> Global Tool Configuration. under maven installation. enter Maven3 as name, enter path of maven installation --> /usr/share/maven and uncheck install automatically option.
     • Also install deploy to container,  Jacoco plugins under Jenkins --> Manage Jenkins --> Manage plug-ins
@@ -63,7 +63,7 @@ Click on your repo, Copy the url from the browser. Paste the url as Repository U
 
 # Copy this project url
 
-# https://github.com/tahers755/devops-project-sample-java-app.git
+ https://github.com/tahers755/devops-project-sample-java-app.git
 
 
 Enter main as branch specifier or which ever branch you want to check out.
